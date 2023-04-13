@@ -8,7 +8,7 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('')"/>
-            <x-text-input id="email" class="block mt-1 w-full" style="border-color:#6e13b6" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="User"/>
+            <x-text-input id="email" class="block mt-1 w-full" style="border-color:#6e13b6; border-size: 20px" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="User"/>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
