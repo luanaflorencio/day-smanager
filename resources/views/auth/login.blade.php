@@ -5,10 +5,18 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
+        <style>
+
+
+            #email, #email:focus{
+                border: .0625rem solid #6e13b6;
+            }
+        </style>
+
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('')"/>
-            <x-text-input id="email" class="block mt-1 w-full" style="border-color:#6e13b6; border-width: 1px;" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="User"/>
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="User"/>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -19,8 +27,8 @@
             <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
                             name="password"
-                            required autocomplete="current-password" 
-                            placeholder="Password" 
+                            required autocomplete="current-password"
+                            placeholder="Password"
                             style="border-color:#6e13b6; border-width: 1px;"/>
 
 
