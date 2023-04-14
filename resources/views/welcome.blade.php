@@ -12,45 +12,65 @@
 
         <!-- Styles -->
         <style>
+            body{
+                background-color: #000211
+            }
             .box-text{
                 display: flex;
                 justify-content: flex-end;
-                margin-right: 1%;
-                margin-top: 1%;
+                margin-top: 2%;
             }
             #about{
                 margin-right: 20px;
                 color: white;
                 text-decoration-line: none;
                 font-size: 18px;
+                font-weight: bold;
             }
             #contact{
                 color: white;
                 text-decoration-line: none;
                 font-size: 18px;
+                font-weight: bold;
             }
             #login{
+                margin-right: 20px;
                 color: white;
                 text-decoration-line: none;
                 font-size: 18px;
-
+                font-weight: bold;
             }
             #reg{
-                margin-left: 20px;
+                margin-right: 20px;
                 color: white;
                 text-decoration-line: none;
                 font-size: 18px;
-
+                font-weight: bold;
+                
             }
             #text{
                 font-size: 25px; 
                 color:#ff8e01;
-                margin-right: 68%;
+                margin-right: 65%;
+
+            }
+            h1{
+                color: white;
+                text-align: center;
+                font-size: 70px;
+                font-weight: bold;
+                margin-top: 5%;
+            }
+            h3{
+                color: white;
+                text-align: center;
+                font-weight: normal;
+
             }
         </style>
 
 </head>
-<body style="background-color: #000211" class="antialiased">
+<body class="antialiased">
     <div class="box-text">
         <strong id="text">DAY'S MANAGER</strong>
             @if (Route::has('login'))
@@ -71,5 +91,7 @@
                 </div>
             @endif
         </div>
+        <h1>WELCOME</h1>
+        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit eaque doloremque nemo, labore voluptatum quam quod fuga corrupti alias ab natus illum provident ipsum quisquam quae dignissimos temporibus illo magni!</h3>
     </body>
 </html>
