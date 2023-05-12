@@ -15,7 +15,7 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('')" />
-            <x-text-input style="border-color:#6e13b6; border-width: 1px;" id="email" class="block mt-1 w-full inputL" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="User" />
+            <x-text-input style="border-color:#6e13b6; border-width: 1px;" id="email" class="block mt-1 w-full inputL" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="Email" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
