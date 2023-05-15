@@ -56,7 +56,7 @@
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      height: 56vh;
+      height: 52vh;
       overflow: hidden;
     }
 
@@ -122,6 +122,15 @@
       text-align: center;
       font-weight: normal;
 
+    }
+
+    .btn-outline-secondary{
+        border: 1px solid #ff8e01;
+        color:#ff8e01;
+    }
+
+    .btn-outline-secondary:hover{
+        background: #ff8e01;
     }
 
   </style>

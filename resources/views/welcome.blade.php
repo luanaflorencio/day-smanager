@@ -46,6 +46,13 @@
             quod
             fuga corrupti alias ab natus illum provident ipsum quisquam quae dignissimos temporibus illo magni!</p>
         </div>
+        <div class="div-button d-flex justify-content-center">
+            <button style="--bs-btn-padding-y: 2rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 18pt;" type="button" class="btn btn-outline-secondary btn-lg">READ MORE</button>
+
+
+        </div>
+
+
       </div>
     </div>
     <div class="row dive">
