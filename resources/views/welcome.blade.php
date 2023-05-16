@@ -1,97 +1,66 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
+@section('content')
 
-        <title>Day's Manager</title>
+  <div class="container menu">
+    <nav class="row navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="text" href="#">DAY'S MANAGER</a>
+        <button class="navbar-toggler bg-body-tertiary" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          @if (Route::has('login'))
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 items">
+              @auth
+                <li class="nav-item">
+                  <a class="nav-link" style="color: white;" href="{{ url('/dashboard') }}">Dashboard</a>
+                </li>
+              @else
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('login') }}" id="about">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('register') }}" id="contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('login') }}" id="login">Login</a>
+                </li>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles -->
-        <style>
-            body{
-                background-color: #000211
-            }
-            .box-text{
-                display: flex;
-                justify-content: flex-end;
-                margin-top: 2%;
-            }
-            #about{
-                margin-right: 20px;
-                color: white;
-                text-decoration-line: none;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            #contact{
-                color: white;
-                text-decoration-line: none;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            #login{
-                margin-right: 20px;
-                color: white;
-                text-decoration-line: none;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            #reg{
-                margin-right: 20px;
-                color: white;
-                text-decoration-line: none;
-                font-size: 18px;
-                font-weight: bold;
-                
-            }
-            #text{
-                font-size: 25px; 
-                color:#ff8e01;
-                margin-right: 65%;
-
-            }
-            h1{
-                color: white;
-                text-align: center;
-                font-size: 70px;
-                font-weight: bold;
-                margin-top: 5%;
-            }
-            h3{
-                color: white;
-                text-align: center;
-                font-weight: normal;
-
-            }
-        </style>
-
-</head>
-<body class="antialiased">
-    <div class="box-text">
-        <strong id="text">DAY'S MANAGER</strong>
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
-                    @auth
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}"  id="about" >About Us</a>
-
-                        <a href="{{ route('register') }}" id="contact" style="margin-right: 20px;">Contact</a>
-                    
-                        <a href="{{ route('login') }}" id="login" >Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" id="reg" >Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+                @if (Route::has('register'))
+                  <a class="nav-link" href="{{ route('register') }}" id="reg">Register</a>
+                @endif
+              @endauth
+            </ul>
+          @endif
         </div>
-        <h1>WELCOME</h1>
-        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit eaque doloremque nemo, labore voluptatum quam quod fuga corrupti alias ab natus illum provident ipsum quisquam quae dignissimos temporibus illo magni!</h3>
-    </body>
-</html>
+    </nav>
+    <div class="row d-flex justify-content-center">
+      <div class="col content">
+        <div class="col-12">
+          <h1 class="title">WELCOME</h1>
+        </div>
+        <div class="col">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit eaque doloremque nemo, labore voluptatum quam
+            quod
+            fuga corrupti alias ab natus illum provident ipsum quisquam quae dignissimos temporibus illo magni!</p>
+        </div>
+        <div class="div-button d-flex justify-content-center">
+            <button style="--bs-btn-padding-y: 2rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 18pt;" type="button" class="btn btn-outline-secondary btn-lg">READ MORE</button>
+
+
+        </div>
+
+
+      </div>
+    </div>
+    <div class="row dive">
+      <div class="col elipse">
+
+      </div>
+    </div>
+  </div>
+
+
+@endsection
